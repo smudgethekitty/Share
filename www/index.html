@@ -5,18 +5,22 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <title>Share</title>
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/share.css" rel="stylesheet">
     <script src="lib/ionic/js/ionic.bundle.js"></script>
     <script src="cordova.js"></script>
     <script src="main/main_app.js"></script>
-    <script src="main/main_controllers.js"></script>
     <script src="main/main_services.js"></script>
+    <script src="board/board_controllers.js"></script>
+    <script src="mixer/mixer_controllers.js"></script>
   </head>
   
   <body ng-app="main" animation="slide-left-right-ios7">
     <ion-nav-bar class="bar-stable nav-title-slide-ios7">
-      <ion-nav-back-button class="button-icon icon ion-chevron-left"></ion-nav-back-button>
+      <ion-nav-back-button class="button-icon icon  ion-ios7-arrow-back">
+        Back
+      </ion-nav-back-button>
     </ion-nav-bar>
 
-    <ion-nav-view></ion-nav-view>
+    <ion-nav-view>Loading...</ion-nav-view>
   </body>
 </html>

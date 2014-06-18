@@ -1,3 +1,5 @@
-angular.module('app.controllers', [])
+angular.module('board.controllers', [])
 
-.controller('boardCtrl', []);
+.controller('BoardCtrl', [function() {
+
+}]);

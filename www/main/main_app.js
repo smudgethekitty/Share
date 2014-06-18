@@ -17,12 +17,24 @@ angular.module('main', ['ionic', 'main.services', 'board.controllers', 'mixer.co
 .config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
   $stateProvider
 
-  .state('main', {
-    url: "/main",
-    abstract: true,
-    templateUrl: "main/main.html"
+  .state('mixer', {
+    url: '',
+    // abstract: false,
+    templateUrl: "mixer/mixer.html",
+    controller: 'MixerCtrl'
+    // views: {
+    //   'board': {
+    //     templateUrl: 'board/board.html',
+    //     controller: 'boardCtrl'
+    //   },
+    //   'mixer': {
+    //     templateUrl: 'mixer/mixer.html',
+    //     controller: 'mixerCtrl'
+    //   }
+    // }
   })
 
+/*
   .state('main.board', {
     url: '/board',
     views: {
@@ -42,6 +54,7 @@ angular.module('main', ['ionic', 'main.services', 'board.controllers', 'mixer.co
       }
     }
   })
+*/
 
-  $urlRouterProvider.otherwise('/main/board');
+  $urlRouterProvider.otherwise('');
 }]);
