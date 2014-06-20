@@ -36,7 +36,7 @@ angular.module('main', ['ionic', 'main.services', 'board.controllers', 'mixer.co
     views: {
       'board': {
         templateUrl: 'board/board.html',
-        controller: "BoardCtrl",
+        controller: "BoardCtrl"
       },
       'mixer': {
         templateUrl: 'mixer/mixer.html',
@@ -49,7 +49,10 @@ angular.module('main', ['ionic', 'main.services', 'board.controllers', 'mixer.co
   .state('main', {
     url: "/main",
     abstract: true,
-    templateUrl: "menu/menu.html"
+    templateUrl: "menu/menu.html",
+    controller: function($rootScope) {
+      $rootScope.currentBoard = 'imgs/boards/board1.png';
+    }
   })
 
   .state('main.tops', {
