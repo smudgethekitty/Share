@@ -18,43 +18,30 @@ angular.module('main', ['ionic', 'main.services', 'board.controllers', 'mixer.co
   $stateProvider
 
   .state('mixer', {
-    url: '',
-    // abstract: false,
+    url: '/mixer',
     templateUrl: "mixer/mixer.html",
     controller: 'MixerCtrl'
-    // views: {
-    //   'board': {
-    //     templateUrl: 'board/board.html',
-    //     controller: 'boardCtrl'
-    //   },
-    //   'mixer': {
-    //     templateUrl: 'mixer/mixer.html',
-    //     controller: 'mixerCtrl'
-    //   }
-    // }
   })
 
-/*
-  .state('main.board', {
+  .state('board', {
     url: '/board',
+    templateUrl: 'board/board.html',
+    controller: 'BoardCtrl'
+  })
+
+  .state('topBottomViews', {
+    url: '/topBottomViews',
     views: {
-      'main-board': {
+      'board': {
         templateUrl: 'board/board.html',
-        controller: 'boardCtrl'
-      }
-    }
-  })
-
-  .state('main.mixer', {
-    url: '/mixer',
-    views: {
-      'main-mixer': {
+        controller: "BoardCtrl",
+      },
+      'mixer': {
         templateUrl: 'mixer/mixer.html',
-        controller: 'mixerCtrl'
+        controller: 'MixerCtrl'
       }
     }
-  })
-*/
+  });
 
-  $urlRouterProvider.otherwise('');
+  $urlRouterProvider.otherwise('/topBottomViews');
 }]);
