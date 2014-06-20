@@ -22,15 +22,15 @@ angular.module('mixer.controllers', [])
   $scope.items = [
     {
       name: 'top1',
-      img: 'mixer/imgs/tops/top1.png'
+      img: 'imgs/tops/top1.png'
     },
     {
       name: 'top2',
-      img: 'mixer/imgs/tops/top2.png'
+      img: 'imgs/tops/top2.png'
     },
     {
       name: 'top3',
-      img: 'mixer/imgs/tops/top3.png'
+      img: 'imgs/tops/top3.png'
     }
   ];
 
