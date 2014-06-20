@@ -1,0 +1,15 @@
+<ion-view title="Bottoms">
+  <ion-nav-buttons side="left">
+    <button menu-toggle="left"class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+  
+  <ion-content class="has-header padding" scroll="false">
+    <ion-slide-box>
+      <ion-slide ng-repeat="bottom in bottoms">
+        <div class="mixer-slide">
+          <img src={{bottom.img}}>
+        </div>
+      </ion-slide>
+    </ion-slide-box>
+  </ion-content>
+</ion-view>
