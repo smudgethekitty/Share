@@ -1,6 +1,8 @@
 angular.module('mixer.controllers', [])
 
-.controller('MixerCtrl', ['$scope', '$ionicSlideBoxDelegate', function($scope, $ionicSlideBoxDelegate) {
+.controller('MixerCtrl', ['$scope', '$ionicSlideBoxDelegate', '$ionicSideMenuDelegate', function($scope, $ionicSlideBoxDelegate, $ionicSideMenuDelegate) {
+  console.log('loading MixerCtrl');
+  
   $scope.nextSlide = function() {
     var nextIndex = ($ionicSlideBoxDelegate.currentIndex() + 1) % $ionicSlideBoxDelegate.slidesCount();
     console.log('Current Index:', nextIndex);
@@ -31,4 +33,8 @@ angular.module('mixer.controllers', [])
       img: 'mixer/imgs/tops/top3.png'
     }
   ];
+
+  $scope.toggleLeft = function() {
+    $ionicSideMenuDelegate.toggleLeft();
+  };
 }]);
