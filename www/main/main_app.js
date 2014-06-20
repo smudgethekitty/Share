@@ -49,14 +49,9 @@ angular.module('main', ['ionic', 'main.services', 'board.controllers', 'mixer.co
   .state('main', {
     url: "/main",
     abstract: true,
-    // templateUrl: "menu/menu.html"
-    views: {
-      'board': {
-        templateUrl: 'board/board.html'
-      },
-      'main': {
-        templateUrl: 'menu/menu.html'
-      }
+    templateUrl: "menu/menu.html",
+    controller: function($rootScope) {
+      $rootScope.currentBoard = 'imgs/boards/board1.png';
     }
   })
 
